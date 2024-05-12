@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const pageTitle = "About Me"
+
+const identity = {
+  firstName: "haganenoubik",
+  country: "Japan",
+  hobbies: ["音楽", "サウナ", "キャンプ"]
+};
+
+const skills = ["HTML", "CSS" , "JavaScript", "Ruby"];
 ---
 
 <Layout title={pageTitle}>
@@ -8,5 +16,13 @@ const pageTitle = "About Me"
   <a href="/about">About</a>
   <a href="/blog">Blog</a>
   <h1>{pageTitle}</h1>
-  <p>私について</p>
+  <p>プロフィール</p>
+  <ul>
+    <li>名前：{identity.firstName}</li>
+    <li>出身：{identity.country}</li>
+    <li>趣味：{identity.hobbies[0]}・{identity.hobbies[1]}・{identity.hobbies[2]}</li>
+  </ul>
+  <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
 </Layout>
