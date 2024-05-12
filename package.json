@@ -1,5 +1,4 @@
 {
-"homepage": "https://haganenoubik.github.io/astro_tutorial/",
   "name": "astro-tutorial",
   "type": "module",
   "version": "0.0.1",
@@ -8,11 +7,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro",
-    "rm": "rm -rf docs",
-    "mv": "mv build docs",
-    "git": "git add . && git commit && git push origin main",
-    "deploy": "npm run rm && npm run build && npm run mv && npm run git"
+    "astro": "astro"
   },
   "dependencies": {
     "astro": "^4.8.2"
