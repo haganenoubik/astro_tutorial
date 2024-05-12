@@ -1,11 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+const pageTitle = "About Me"
 ---
 
-<Layout title='about page'>
+<Layout title={pageTitle}>
   <a href="/">Home</a>
   <a href="/about">About</a>
   <a href="/blog">Blog</a>
   <h1>About</h1>
-  <p>ブログについて</p>
+  <p>{pageTitle}</p>
 </Layout>
