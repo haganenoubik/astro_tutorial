@@ -1,6 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 const pageTitle = "About Me"
+
+const identity = {
+  firstName: "haganenoubik",
+  country: "Japan",
+  hobbies: ["音楽", "サウナ", "キャンプ"]
+};
+
+const skills = ["HTML", "CSS" , "JavaScript", "Ruby"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <Layout title={pageTitle}>
@@ -8,5 +20,19 @@ const pageTitle = "About Me"
   <a href="/about">About</a>
   <a href="/blog">Blog</a>
   <h1>{pageTitle}</h1>
-  <p>私について</p>
+  <p>プロフィール</p>
+  <ul>
+    <li>名前：{identity.firstName}</li>
+    <li>出身：{identity.country}</li>
+    <li>趣味：{identity.hobbies[0]}・{identity.hobbies[1]}・{identity.hobbies[2]}</li>
+  </ul>
+  <ul>
+    {skills.map((skill) => <li>{skill}</li>)}
+  </ul>
+
+  {happy && <p>I am happy to be learning Astro! Astroを学べて幸せです！</p>}
+
+  {finished && <p>I finished this tutorial! このチュートリアルを終えました！</p>}
+
+  {goal === 3 ? <p>My goal is to finish in 3 days. 3日で終えるのが目標です。</p> : <p>My goal is not 3 days. 3日が目標ではありません。</p>}
 </Layout>
